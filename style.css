@@ -1,0 +1,253 @@
+:root {
+    --cor_principal: #8525bd;
+    --cor_principal_escura: #1f0c29;
+    --preto: #000000;
+    --branco: #ffffff;
+    --background: #1d2021;
+    --cor_secundaria: #151616;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    text-decoration: none;
+    list-style: none;
+    font-family: Inter, sans-serif;
+    color: var(--branco);
+    margin: 0;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, var(--preto), var(--cor_principal_escura), var(--cor_principal));
+    align-items: center;
+    padding-left: 25px;
+    height: 8em;
+    flex-wrap: wrap;
+}
+
+.projeto {
+    font-size: clamp(1.7rem, 2.5vw, 2rem);
+}
+
+.barra-nav {
+    display: flex;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    padding: 30px;
+}
+
+li {
+    padding: 0.5vw;
+    font-size: clamp(1.15rem, 1.3vw, 1.9rem);
+}
+
+li:hover {
+    border-radius: 100px;
+    border: 1px solid var(--cor_principal);
+    background-color: var(--cor_principal);
+}
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid #555;
+    padding: 1vw;
+}
+
+.sobrenos {
+    display: grid;
+    width: 100%;
+    max-width: 75vw;
+    grid-template-columns: auto auto;
+    align-items: center;
+    grid-gap: clamp(0.1em, 5vw, 4.5em);
+    margin-left: clamp(5rem, 10vw, 12.4rem);
+    padding-bottom: 20px;
+}
+
+.sobrenos > p:nth-child(1) {
+    font-size: 1.5em;
+}
+
+.sobrenos > p:nth-child(2) {
+    max-width: 90%;
+    font-size: clamp(14px, 1vw, 1.5vw);
+}
+
+.tec {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    justify-self: center;
+    text-align: center;
+
+    padding: 20px;
+    width: 45vw;
+    gap: 10px;
+
+    background-color: var(--cor_principal_escura);
+    border: 3px solid var(--cor_principal);
+    border-radius: 2em;
+    font-size: clamp(14px, 1vw, 1.5vw);
+    margin-bottom: 20px;
+}
+
+.tectitulo {
+    grid-column: 1/3;
+}
+
+.tecimg {
+    width: 25px;
+}
+
+
+#colab {
+    display: flex;
+    margin-block-start: -1.5em;
+    margin-inline-start: 2.25em;
+    gap: 0.1em;
+}
+
+.dupla {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 1vw;
+    margin-top: -15px;
+}
+
+.imagem {
+    width: 160px;
+    max-width: 200px;
+    border: 3px solid var(--cor_principal);
+    border-radius: 100px;
+}
+
+.nomes {
+    font-size: clamp(1.1rem, 1.3vw, 1.9rem);
+}
+
+.github {
+    height: auto;
+    width: 2em;
+}
+
+.linkedin {
+    height: auto;
+    width: 5em;
+    width: 2em;
+}
+
+footer {
+    margin-top: auto;
+    height: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor_principal_escura);
+}
+
+.contatos {
+    font-size: clamp(1.25rem, 1.1vw, 1.9rem);
+    margin: 3vw;
+}
+
+.img_contatos {
+    margin-inline-start: 1em;
+}
+
+@media (max-width: 772px) {
+    header > nav {
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 691px) {
+    .sobrenos {
+        grid-template-columns: 1fr;
+        width: 90%;
+        max-width: 100vw;
+        margin-left: 2em;
+        text-align: justify;
+        grid-gap: 1em;
+    }
+
+    ul {
+        padding: 0;
+        gap: 3px;
+    }
+
+    li {
+        padding: 9px;
+    }
+
+    #colab {
+        margin-block-start: -0.6em;
+    }
+
+    .sobrenos > p:nth-child(1) {
+        font-size: 1.25em;
+    }
+
+    .tec {
+        width: 75vw;
+    }
+}
+
+@media (max-width: 425px) {
+    .projeto {
+        font-size: 22px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+
+    #colab {
+        margin-left: 10px;
+    }
+
+    .contatos {
+        margin: 0 0 0 5px;
+        margin-left: 5px;
+    }
+
+    .contatos > p {
+        font-size: medium;
+    }
+
+    #copy {
+        font-size: 14px;
+    }
+
+    .img_contatos {
+        margin-inline-start: 0;
+    }
+
+    .imagem {
+        width: 130px;
+    }
+
+}
